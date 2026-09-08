@@ -1,0 +1,24 @@
+# Local dependencies and build output
+node_modules/
+dist/
+.test-build/
+src-tauri/target/
+.phase0/
+
+# Local model and bundled release payloads (GitHub file-size limits)
+models/*.gguf
+src-tauri/resources/inference/cpu/*
+src-tauri/resources/inference/cuda/*
+Qwen_Local*.AppImage
+Qwen_Local*.deb
+
+# Runtime data and machine-local files
+*.db
+*.db-shm
+*.db-wal
+*.log
+.env*
+.DS_Store
+
+# User-provided scratch material
+pasted-text.txt

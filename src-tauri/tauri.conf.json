@@ -1,0 +1,18 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Qwen Local",
+  "version": "0.1.0",
+  "identifier": "local.qwen.desktop",
+  "build": { "beforeDevCommand": "npm run dev", "devUrl": "http://localhost:1420", "beforeBuildCommand": "npm run build", "frontendDist": "../dist" },
+  "app": { "windows": [{ "title": "Qwen Local", "width": 1100, "height": 760, "minWidth": 720, "minHeight": 520, "dragDropEnabled": false }], "security": { "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data: asset:; connect-src 'self' ipc: http://ipc.localhost http://127.0.0.1:18080" } },
+  "bundle": {
+    "active": true,
+    "targets": ["appimage", "deb"],
+    "icon": ["icons/icon.png"],
+    "resources": {
+      "../models/Qwen3-4B-Instruct-2507-abliterated.Q4_K_M.gguf": "inference/model.gguf",
+      "resources/inference/cpu/": "inference/cpu/",
+      "resources/inference/cuda/": "inference/cuda/"
+    }
+  }
+}
