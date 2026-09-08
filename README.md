@@ -59,6 +59,16 @@ npx tauri dev
 - [IMPLEMENTATION_PLAN.md](IMPLEMENTATION_PLAN.md) — sequential implementation and verification record
 - [INFERENCE_INTEGRATION_PLAN.md](INFERENCE_INTEGRATION_PLAN.md) — llama.cpp, packaging, offline, and runtime validation record
 
+## Publishing
+
+The repository is ready for a public GitHub push. After creating an empty GitHub repository, run:
+
+```bash
+./scripts/publish-github.sh https://github.com/USER/REPO.git
+```
+
+GitHub credentials are intentionally not stored in this project.
+
 ## Portfolio notes
 
 This project demonstrates local AI product engineering across a native desktop shell, Rust process lifecycle management, SQLite persistence, bounded code retrieval, offline OCR/PDF processing, streaming SSE UX, and safety-gated code editing. The UI intentionally uses original Qwen Local branding and open-source/icon-text primitives rather than proprietary Codex assets.
